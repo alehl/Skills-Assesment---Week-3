@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+{% block content %}
+<head>
+
+<!-- Characters, Bootstrap and CSS-->
+	<meta charset="UTF-8">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel = "stylesheet">
+	<link rel="stylesheet" href="/static/styles.css">
+
+<!-- Nav Bar-->
+ 	<nav class="navbar navbar-light bg-faded">
+  		<a class="navbar-brand">Humble Beehaviour Cheese Co.</a>
+  			<ul class="nav navbar-nav">
+    			<li class="nav-item active">
+      				<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+    			</li>
+    			<li class="nav-item">
+      				<a class="nav-link" href="/about">About our cows</a>
+    			</li>
+    			<li class="nav-item">
+      				<a class="nav-link" href="/application-form">Apply now!</a>
+    			</li>
+  			</ul>
+	</nav>
+
+{% endblock %}
+
+<!-- Tab Title-->
+	<title>Humble Beehaviour Cheese Co.</title>
+</head>
+
+<body>
+
+<!-- Greeting-->
+<h1 id = "homepageheading">Hello, welcome to Humble Beehaviour's Cheese official website</h1>
+
+<!-- Company logo-->
+<div><img src="http://vignette1.wikia.nocookie.net/harvestmoondscute/images/a/a4/Cow.jpg"/></div>
+
+<!-- Disclaimer-->
+	<div id = "disclaimer">All rights reserved - Humble Beehaviour Cheese is not a subsidiary of Milk.co</div>
+
+</body>
+</html>
