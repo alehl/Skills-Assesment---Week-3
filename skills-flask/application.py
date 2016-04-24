@@ -1,4 +1,5 @@
 from flask import Flask, render_template, session, request, flash
+from django.forms import ValidationError
 
 app = Flask(__name__)
 
@@ -28,11 +29,7 @@ def greet_person():
 	desiredposition = request.form.get("desiredposition")
 	desiredsalary = request.form.get("desiredsalary")
 
-	if desiredsalary != int:
-    		flash("Sorry, please enter an amount")
-
-	else:
-    		return render_template("application-response.html", 
+    	return render_template("application-response.html", 
 							firstname = firstname, 
 							lastname = lastname, 
 							desiredposition = desiredposition, 
@@ -45,7 +42,20 @@ def about():
 	"""This will handle the submissions from appliaction-form.html"""
 
 	return render_template("about.html")
-	#print "Thank you %s, for applying to be a %s. Your minimum salary requirement is %s." %(first_and_last_name, position, salary)
+
+@app.route("/products")
+def products():
+
+	"""This will show a list of our products"""
+
+	return render_template("products.html")
+
+@app.route("/storelocator")
+def storelocator():
+
+	"""This will display a map"""
+
+	return render_template("storelocator.html")
 
 if __name__ == "__main__":
     app.run(debug=True)

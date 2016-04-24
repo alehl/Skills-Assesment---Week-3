@@ -1,20 +1,29 @@
 <!doctype html>
 <html>
 <head>
-<!-- See base.html-->
 
-<!-- Tab title -->
-<meta charset="UTF-8">
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel = "stylesheet">
-<link rel="stylesheet" href="/static/styles.css">
-<title>Confirmation- Humble Beehaviour Cheese Co.</title>
+<!-- See base.html-->
+{% include "base.html" %}
+
+{% block head %}
+
+<title>Submitted! - Humble Beehaviour Cheese Co.</title>
 </head>
+
+{% endblock %}
+
+<!-- Nav Bar-->
+{% block navbar %} {% endblock %}
 
 <body>
 <!-- Response to applicant -->
     <div id="application_submitted">
     {{ firstname }} {{ lastname }}, thank you for applying to be a {{ desiredposition }}!<br>
     </br>Your minimum salary requirement is {{ desiredsalary }} USD.</div>
-
 </body>
+
+<!-- Footer-->
+{% block content %}
+{% endblock %}
+
 </html>

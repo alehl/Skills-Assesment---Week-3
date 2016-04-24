@@ -2,18 +2,25 @@
 <html>
 <head>
 
-<!-- Bootstrap-->
-	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel = "stylesheet">
-	<link rel="stylesheet" href="/static/styles.css">
+<!-- See base.html-->
+{% include "base.html" %}
 
-<!-- Tab title-->
-	<!-- <meta charset="UTF-8">-->
-	<title>Application - Humble Beehaviour Cheese Co.</title>
-		<h1> Thank you for your interest in joining our team!</h1>
-		<h2 id="job_app_instructions">Please provide the information requested below and you will receive a response within 3 business days <br><br>Thank you and have a <b>grate</b> day!</h2>
+{% block head %}
+
+<title>Apply today! - Humble Beehaviour Cheese Co.</title>
 </head>
 
+{% endblock %}
+
+<!-- Nav Bar-->
+{% block navbar %} {% endblock %}
+</head>
+
+<!-- Instructions-->
 <body>
+		<title>Application - Humble Beehaviour Cheese Co.</title>
+		<h1> Thank you for your interest in joining our team!</h1>
+		<h2 id="job_app_instructions">Please provide the information requested below and you will receive a response within 3 business days <br><br>Thank you and have a <b>grate</b> day!</h2>
 
 <!-- Form that captures applicant's information begins here.-->
     <form action = "/application-response"  method="POST"> <!-- Was this all I was supposed to do? -->
@@ -29,15 +36,24 @@
     			<option value = "Software Engineer">Software Engineer</option>
     			<option value = "QA Engineer">QA Engineer</option>
     			<option value = "Product Manager">Product Manager</option></div></select><br>
-<!-- Company logo-->
-	<br>
-	<div><img src="http://vignette1.wikia.nocookie.net/harvestmoondscute/images/a/a4/Cow.jpg" width="50" height="35" />
-	</div>
-	<br>
-<!-- Submit button-->
-    	<div id ="submit_button"><input type ="submit"></div>
 
+<!-- Submit button-->
+	<br>
+    	<div id ="submit_button"><input type ="submit"></div>
     </form>
 
+
+<!-- Company logo-->
+	<br>
+	<div class ="container">
+		<div class ="row">
+			<div class ="col-xs-2"><img style="float: left; margin: 0px 15px 15px 0px;" id ="cheesetypes" src="http://vignette1.wikia.nocookie.net/harvestmoondscute/images/a/a4/Cow.jpg" width="50" height="35"/></div>
+		</div>
+	</div>
+	<br>
 </body>
+
+<!-- Footer-->
+{% block content %}
+{% endblock %}
 </html>

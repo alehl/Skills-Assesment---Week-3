@@ -1,28 +1,34 @@
 <!doctype html>
 <html>
 <head>
+
 <!-- See base.html-->
+{% include "base.html" %}
 
-<!-- Tab Title-->
-<meta charset="UTF-8">
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel = "stylesheet">
-<link rel="stylesheet" href="/static/styles.css">
-<title>Humble Beehaviour Cheese Co.</title>
+{% block head %}
 
+<title>Home - Humble Beehaviour Cheese Co.</title>
 </head>
 
-<body>
+{% endblock %}
+
+<!-- Nav Bar-->
+{% block navbar %} {% endblock %}
 
 <!-- Greeting-->
-	<h1 id = "home_company_name">Humble Beehaviour Cheese Co.</h1>
+<body>
 	<h3 id = "welcome_message">Welcome to our official website!</h3>
 
 <!-- Company logo-->
-	<div><img id ="cheese" src="http://worksheetgenius.com/Gfx/cheese.png"/></div>
-
+	<div class ="container">
+		<div class ="row">
+			<div class ="col-xs-12"><img id ="cheesetypes" src="http://worksheetgenius.com/Gfx/cheese.png"/></div>
+		</div>
+	</div>
 </body>
 
-<!-- Disclaimer-->
-	<footer id = "disclaimer">All rights reserved - Humble Beehaviour Cheese is not a subsidiary of Milk.co</footer>
+<!-- Footer-->
+{% block content %}
+{% endblock %}
 
 </html>

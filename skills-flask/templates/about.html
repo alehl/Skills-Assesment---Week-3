@@ -2,19 +2,33 @@
 <html>
 <head>
 
-<!-- See index.html-->
+<!-- See base.html-->
+{% include "base.html" %}
 
-<!-- Tab title-->
+{% block head %}
 
-<meta charset="UTF-8">
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel = "stylesheet">
-<link rel="stylesheet" href="/static/styles.css">
 <title>About - Humble Beehaviour Cheese Co.</title>
 </head>
 
+{% endblock %}
+
+<!-- Nav Bar-->
+{% block navbar %} {% endblock %}
+
 <!-- All about cows-->
 <body>
-	<span id="ourcowsrock">Our cows rock!</span>
+	<!-- Company logo-->
+	<div class ="container">
+		<div class ="row">
+			<div class ="col-xs-12 col-md-9 col-md-push-3"><img style="float: left; margin: 0px 15px 15px 0px;" id ="cheesetypes" src="http://vignette1.wikia.nocookie.net/harvestmoondscute/images/a/a4/Cow.jpg" width="50" height="35"/>
+		</div>
+	</div>
+
+	<div class ="col-xs-12 col-md-6 col-md-9"><span id="ourcowsrock">The average cow is 2 years old when she has her first calf. Calves are fed milk until they are 8-9 weeks old. A young female cow is called a heifer. Before milking machines were invented in 1894, farmers could only milk about 6 cows per hour.</span>
 </body>
+
+<!-- Footer-->
+{% block content %}
+{% endblock %}
 
 </html>

@@ -1,11 +1,8 @@
 
+<!DOCTYPE html>
 
-<!-- Nav Bar-->
-{% extends "base.html" %}
 
 {% block head %}
-
-    <title>{% block title %}{% endblock %} - Humble Beehaviour</title>
     <!-- Characters, Bootstrap and CSS-->
     <meta charset="UTF-8">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel = "stylesheet">
@@ -13,21 +10,20 @@
 
 {% endblock %}
 
+<!-- Nav Bar-->
 {% block navbar %}
     <div class="navbar navbar-inverse" role="navigation">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Humble Beehaviour Cheese Co.</span>
-                    <span class="icon-bar" href="/">Home</span>
-                    <span class="icon-bar" href="/about">About our cows</span>
-                    <span class="icon-bar" href="/application-form">Apply now!</span>
-                </button>
-                <a class="navbar-brand" href="/">MyFlask</a>
+                <a class="navbar-brand" href="/">Humble Beehaviour Cheese Co.</a>
             </div>
-            <div class="navbar-collapse collapse">
+            <div>
                 <ul class="nav navbar-nav">
-                    <li><a href="/">Home</a></li>
+                    <li><a href="/products">Products</a></li>
+                    <li><a href="/storelocator">Store Locator</a></li>
+                    <li><a href="/about">About us</a></li>
+                    <li><a href="/application-form">Apply now!</a></li>
+
                     <li><a href="/bootstrap"></a></li>
                 </ul>
             </div>
@@ -35,8 +31,9 @@
     </div>
 {% endblock %}
 
+<!-- Footer-->
 {% block content %}
-    <div class="container">
-        {% block page_content %}{% endblock %}
-    </div>
+    <footer id = "disclaimer">All rights reserved - Humble Beehaviour Cheese is not a subsidiary of Milk.co</footer>
 {% endblock %}
+
+</html>
