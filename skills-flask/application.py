@@ -16,24 +16,23 @@ def application_form():
 
 	"""This will be the application form where users will enter information in the application."""
 
-	applicant_first_name = request.args.get("firstname")
-	applicant_last_name = request.args.get("lastname")
-	applicant_des_position = request.args.get("desiredposition")
-	applicant_des_salary = request.args.get("desiredsalary")
-
-	return render_template("application-form.html", 
-							firstname = applicant_first_name, 
-							lastname = applicant_last_name, 
-							desiredposition = applicant_des_position, 
-							desiredsalary = applicant_des_salary)
+	return render_template("application-form.html")
 
 
-@app.route("/application-response", methods = ['GET', 'POST'])
-def application_response():
-
+@app.route('/application-response')
+def greet_person():
 	"""This will handle the submissions from appliaction-form.html"""
 
-	return render_template("application-response.html")
+	firstname = request.args.get("firstname")
+	lastname = request.args.get("lastname")
+	desiredposition = request.args.get("desiredposition")
+	desiredsalary = request.args.get("desiredsalary")
+
+	return render_template("application-response.html", 
+							firstname = firstname, 
+							lastname = lastname, 
+							desiredposition = desiredposition, 
+							desiredsalary = desiredsalary)
 
 
 @app.route("/about")

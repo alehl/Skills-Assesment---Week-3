@@ -1,13 +1,13 @@
 <!doctype html>
 <html>
 <head>
-
-<!-- See index.html-->
-{% block content %}
-{% endblock %}
+<!-- See base.html-->
 
 <!-- Tab title-->
-		<title>Application - Humble Beehaviour Cheese Co.</title>
+<meta charset="UTF-8">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel = "stylesheet">
+<link rel="stylesheet" href="/static/styles.css">
+<title>Application - Humble Beehaviour Cheese Co.</title>
 
 </head>
 <body>
@@ -17,7 +17,8 @@
 	</div><br></br>
 
 <!-- Form that captures applicant's information begins here.-->
-    <form action = "/application-form" method = "POST">
+    <form action = "/application-response">
+
     	<div id = "first_name">First Name:</div>
     		<input type ="text" name = "firstname" placeholder="Your first name here"><br></br>
     	<div id = "last_name">Last Name:</div>
@@ -27,6 +28,7 @@
        	<div id = "minimum_salary">Minimum desired salary:</div>
     		<input type ="text" name = "desiredsalary" placeholder="$"><br></br>
     	<div id ="submit_button"><input type ="submit"></div>
+
     </form>
 
 </body>
