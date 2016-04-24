@@ -1,29 +1,31 @@
 <!doctype html>
 <html>
 <head>
-<!-- See base.html-->
+
+<!-- Bootstrap-->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel = "stylesheet">
+	<link rel="stylesheet" href="/static/styles.css">
 
 <!-- Tab title-->
-<meta charset="UTF-8">
-<!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel = "stylesheet"> -->
-<link type ="text/css" rel "stylesheet" href="static/styles.css"/>
-<title>Application - Humble Beehaviour Cheese Co.</title>
-<h1> Thank you for your interest in joining our team!</h1>
-<h2>Please provide the following information and we will contact you if there are any openings!</h2>
+	<!-- <meta charset="UTF-8">-->
+	<title>Application - Humble Beehaviour Cheese Co.</title>
+		<h1> Thank you for your interest in joining our team!</h1>
+		<h2 id="job_app_instructions">Please provide the information requested below and you will receive a response within 3 business days <br><br>Thank you and have a <b>grate</b> day!</h2>
 </head>
+
 <body>
 
 <!-- Form that captures applicant's information begins here.-->
-    <form action = "/application-response" method="POST"> <!-- Was this all I was supposed to do? -->
+    <form action = "/application-response"  method="POST"> <!-- Was this all I was supposed to do? -->
 
     	<div id = "first_name">First Name:</div>
-    		<input type ="text" name = "firstname" placeholder="Your first name here"><br></br>
+    		<input type ="text" name = "firstname" placeholder="Your first name here" required><br></br>
     	<div id = "last_name">Last Name:</div>
-    		<input type ="text" name = "lastname" placeholder="Your last name here"><br></br>
+    		<input type ="text" name = "lastname" placeholder="Your last name here" required><br></br>
     	<div id = "minimum_salary">Minimum desired salary:</div>
-    		<input type ="text" name = "desiredsalary" placeholder="$"><br></br>
+    		<input type ="text" name = "desiredsalary" placeholder="$" required><br></br>
     	<div id = "desired_position">Position applying for:
-    		<select name = "desiredposition">
+    		<select name = "desiredposition" required>
     			<option value = "Software Engineer">Software Engineer</option>
     			<option value = "QA Engineer">QA Engineer</option>
     			<option value = "Product Manager">Product Manager</option></div></select><br>

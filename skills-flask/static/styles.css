@@ -1,4 +1,38 @@
-body {
-	background-color: #ffcc00;
-	font-family: calibri;
+
+
+input, textarea {
+		background-color: #ffcc00;
+		font-family: calibri, sans-serif;
+
+}
+
+#minimum_salary {
+		font-weight: bold;
+
+}
+
+footer {
+    background-color: #F3F3F3;
+    padding-top: 10px;
+    padding-bottom: 0px;
+    position:fixed;
+    bottom:0;
+    width:100%;
+}
+
+#cheese {
+    margin: 100px 150px 100px 80px;
+}
+
+#job_app_instructions {
+    border: 3px solid #ffcc00;
+    font-size: 16px;
+}
+
+#application_submitted {
+    border: 3px solid #ffcc00;
+    font-size: 25px;
+	font-family: calibri, sans-serif;
+	position: left;
+
 }

@@ -1,4 +1,4 @@
-from flask import Flask, render_template, session, request
+from flask import Flask, render_template, session, request, flash
 
 app = Flask(__name__)
 
@@ -19,16 +19,20 @@ def application_form():
 	return render_template("application-form.html")
 
 
-@app.route('/application-response')
+@app.route('/application-response', methods = ['GET', 'POST'])
 def greet_person():
 	"""This will handle the submissions from appliaction-form.html"""
 
-	firstname = request.args.get("firstname")
-	lastname = request.args.get("lastname")
-	desiredposition = request.args.get("desiredposition")
-	desiredsalary = request.args.get("desiredsalary")
+	firstname = request.form.get("firstname")
+	lastname = request.form.get("lastname")
+	desiredposition = request.form.get("desiredposition")
+	desiredsalary = request.form.get("desiredsalary")
 
-	return render_template("application-response.html", 
+	if desiredsalary != int:
+    		flash("Sorry, please enter an amount")
+
+	else:
+    		return render_template("application-response.html", 
 							firstname = firstname, 
 							lastname = lastname, 
 							desiredposition = desiredposition, 
